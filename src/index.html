@@ -10,6 +10,9 @@
     <div class="container">
         <h1>Spinning Wheel of Fortune</h1>
         
+        <!-- First ad banner -->
+        <div class="ad-banner" id="ad-banner-1"></div>
+        
         <div class="wheel-container">
             <canvas id="wheel" width="500" height="500"></canvas>
             <div id="spin-btn">SPIN</div>
@@ -26,6 +29,20 @@
                 <ul id="names-container"></ul>
                 <button id="reset-btn">Reset Names</button>
             </div>
+        </div>
+        
+        <!-- Second ad banner -->
+        <div class="ad-banner" id="ad-banner-2"></div>
+    </div>
+    
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <span class="close-popup" id="close-popup">&times;</span>
+            <h2>Ad Blocker Detected!</h2>
+            <p>We noticed you're trying to interact with our ads.</p>
+            <p>To remove ads from this site, please consider donating $5 to Dani on Motivosity!</p>
+            <button class="donate-btn" id="donate-btn">Donate $5</button>
         </div>
     </div>
 </body>
