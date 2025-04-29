@@ -1,4 +1,5 @@
 node_modules/
+dist/
 # Ignore logs
 *.log
 # Ignore IDE specific files
