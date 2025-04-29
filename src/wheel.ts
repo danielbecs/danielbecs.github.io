@@ -11,10 +11,10 @@ export class SpinningWheel {
   private radius: number;
   private segments: WheelSegment[] = [];
   private isSpinning: boolean = false;
-  private rotation: number = 0;
+  private rotation: number = Math.random() * Math.PI * 2;
   private spinAngle: number = 0;
-  private deceleration: number = 0.98;
-  private minSpinSpeed: number = 0.005;
+  private deceleration: number = 0.97 + Math.random() * 0.02; // Random deceleration between 0.98 and 0.99
+  private minSpinSpeed: number = 0.001;
   private currentSpinSpeed: number = 0;
   private nameInput: HTMLInputElement;
   private namesList: HTMLUListElement;
@@ -212,7 +212,7 @@ export class SpinningWheel {
     if (this.isSpinning || this.segments.length === 0) return;
     
     this.isSpinning = true;
-    this.currentSpinSpeed = 0.2 + Math.random() * 0.2; // Random speed between 0.2 and 0.4
+    this.currentSpinSpeed = 0.2 + Math.random() * 0.3; // Random speed between 0.2 and 0.5
     this.spinAngle = 0;
     this.winnerDisplay.textContent = '';
     
