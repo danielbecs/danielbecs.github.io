@@ -48,7 +48,12 @@ function setupPrankAds() {
 function showPopup() {
   const popupOverlay = document.getElementById('popup-overlay');
   if (popupOverlay) {
-    popupOverlay.classList.add('active');
+    // First make it display block so it's in the DOM flow
+    popupOverlay.style.display = 'flex';
+    // Use a small timeout to ensure the display change is processed before adding active class
+    setTimeout(() => {
+      popupOverlay.classList.add('active');
+    }, 10);
   }
 }
 
@@ -56,5 +61,9 @@ function hidePopup() {
   const popupOverlay = document.getElementById('popup-overlay');
   if (popupOverlay) {
     popupOverlay.classList.remove('active');
+    // Wait for transition to finish before hiding element completely
+    setTimeout(() => {
+      popupOverlay.style.display = 'none';
+    }, 300); // Match this with your CSS transition time (0.3s)
   }
 }

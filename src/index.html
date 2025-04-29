@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinning Wheel of Fortune</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent flash of unstyled content */
+        .popup-overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -36,7 +43,7 @@
     </div>
     
     <!-- Popup Overlay -->
-    <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-overlay" id="popup-overlay" style="display: none;">
         <div class="popup-content">
             <span class="close-popup" id="close-popup">&times;</span>
             <h2>Get the ad free experience!</h2>
