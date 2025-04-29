@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.wheel-container {
+  position: relative;
+  margin: 0 auto 2rem;
+  width: 500px;
+  height: 500px;
+}
+
+canvas {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+#spin-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #e74c3c;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#spin-btn:hover {
+  background-color: #c0392b;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.name-input, .name-list {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#reset-btn {
+  background-color: #95a5a6;
+  margin-top: 1rem;
+}
+
+#reset-btn:hover {
+  background-color: #7f8c8d;
+}
+
+ul {
+  list-style: none;
+  margin-top: 1rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+li button {
+  background-color: #e74c3c;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+li button:hover {
+  background-color: #c0392b;
+}
+
+#winner-display {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
