@@ -35,15 +35,15 @@ jobs:
           version: 8
           
       - name: Install dependencies
-        run: cd wheel-of-fortune && pnpm install
+        run: pnpm install
         
       - name: Build site
-        run: cd wheel-of-fortune && pnpm build
+        run: pnpm build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './wheel-of-fortune/dist'
+          path: './dist'
 
   deploy:
     environment:
